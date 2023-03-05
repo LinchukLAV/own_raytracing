@@ -42,9 +42,9 @@ Vector3d Vector3d::Cross(const Vector3d& vec3d) const noexcept
 	};
 }
 
-float Vector3d::GetAngleBetween(const Vector3d& vec) const noexcept
+float Vector3d::GetCosBetween(const Vector3d& vec) const noexcept
 {
 	float numerator = Dot(vec);
 	float denominator = GetLength() * vec.GetLength();
-	return acos(numerator / denominator);
+	return numerator / denominator;
 }
